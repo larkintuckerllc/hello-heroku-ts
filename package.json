@@ -5,6 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
     "start": "npm run serve",
     "serve": "node dist/server.js",
     "watch-node": "nodemon dist/server.js",
@@ -12,13 +13,16 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "8.11.4"
+  },
   "devDependencies": {
     "nodemon": "^1.18.3",
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.1"
+    "tslint": "^5.11.0"
   },
   "dependencies": {
     "@types/express": "^4.16.0",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "typescript": "^3.0.1"
   }
 }
